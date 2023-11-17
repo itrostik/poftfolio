@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+
+.header{
+  padding: 29px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo{
+    cursor: pointer;
+  }
+  &__list{
+    display: flex;
+    gap: 33px;
+    &-item{
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 900;
+      transition: 0.5s;
+      &:hover{
+        color: $accentColor;
+      }
+    }
+    &-hashtag{
+      color: $accentColor;
+    }
+  }
+}
