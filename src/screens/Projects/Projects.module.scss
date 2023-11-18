@@ -1,0 +1,18 @@
+.projects{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  &__title{
+    font-size: 25px;
+    font-weight: 900;
+    span{
+      color: #CD00FF;
+    }
+  }
+  &__subtitle{
+    color: #ACACAC;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+  }
+}
