@@ -1,29 +1,29 @@
+@import "../../styles/variables";
+
 .projects__categories-list{
   display: flex;
   flex-wrap: wrap;
   //justify-content: center;
-  gap: 29px 40px;
+  gap: 20px;
 }
 
 .projects__categories-item{
   min-width: 150px;
   text-align: center;
-  color: #000;
-  font-size: 25px;
-  font-weight: 900;
-  border-radius: 10px;
-  background: #808080;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid #CD00FF;
   padding: 10px 20px;
   cursor: pointer;
-  transition: 0.5s;
+  transition: $transition;
   &:hover{
-    background: #ACACAC;
+    background: $hoverColor;
   }
 }
 
 .active-category{
-  background: #FFFFFF;
+  background: #CD00FF;
   &:hover{
-    background: #FFFFFF;
+    background: #CD00FF;
   }
 }

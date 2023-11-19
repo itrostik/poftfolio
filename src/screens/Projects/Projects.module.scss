@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .projects{
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
     font-size: 25px;
     font-weight: 900;
     span{
-      color: #CD00FF;
+      color: $accentColor;
     }
   }
   &__subtitle{
@@ -14,5 +16,52 @@
     font-size: 14px;
     font-weight: 500;
     margin: 0 0 10px 0;
+  }
+  &__sort{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    &-title{
+      color: $accentColor;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+    &-name{
+      cursor: pointer;
+      padding: 0 0 2px 0;
+      border-bottom: 2px dashed $accentColor;
+    }
+    &-modal{
+      border: 1px solid $accentColor;
+      overflow: hidden;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      border-radius: 10px;
+    }
+  }
+}
+
+.modal-sort__name{
+  cursor: pointer;
+  color: $backgroundColor;
+  padding: 10px;
+  border-radius: 10px;
+  transition: $transition;
+  &:hover{
+    color: $mainColor;
+    background: $accentColor;
   }
 }

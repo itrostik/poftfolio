@@ -15,7 +15,7 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: 900;
-      transition: 0.5s;
+      transition: $transition;
       &:hover{
         color: $accentColor;
       }

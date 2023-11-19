@@ -14,3 +14,16 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: $mainColor;
 }
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $backgroundColor;        /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $accentColor;    /* цвет бегунка */
+  border-radius: 20px;       /* округлось бегунка */
+}
