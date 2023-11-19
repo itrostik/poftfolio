@@ -28,3 +28,4 @@ tsconfig.node.json
 .eslintrc.cjs
 
 src/vite-env.d.ts
+projects.json
