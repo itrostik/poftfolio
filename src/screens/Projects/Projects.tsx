@@ -10,14 +10,34 @@ export default function Projects() {
   const sortTypes = ["по убыванию сложности", "по возрастанию сложности"];
   const [activeSort, setActiveSort] = useState(0);
   const [openModal, setOpenModal] = useState(false);
-
   const [projects, setProjects] = useState<Project[] | null>(null);
   useEffect(() => {
     const getProjects = async () => {
-      const projects = await axios.get<Project[]>(
-        "https://650f457c54d18aabfe99fade.mockapi.io/api/shop/projects",
-      );
-      setProjects(projects.data);
+      if (activeCategory !== 0) {
+        if (activeSort === 1) {
+          const projects = await axios.get<Project[]>(
+            `https://650f457c54d18aabfe99fade.mockapi.io/api/shop/projects?category=${activeCategory}&sortBy=complexity`,
+          );
+          setProjects(projects.data);
+        } else {
+          const projects = await axios.get<Project[]>(
+            `https://650f457c54d18aabfe99fade.mockapi.io/api/shop/projects?category=${activeCategory}&sortBy=complexity&order=desc`,
+          );
+          setProjects(projects.data);
+        }
+      } else {
+        if (activeSort === 1) {
+          const projects = await axios.get<Project[]>(
+            `https://650f457c54d18aabfe99fade.mockapi.io/api/shop/projects?sortBy=complexity`,
+          );
+          setProjects(projects.data);
+        } else {
+          const projects = await axios.get<Project[]>(
+            `https://650f457c54d18aabfe99fade.mockapi.io/api/shop/projects?sortBy=complexity&order=desc`,
+          );
+          setProjects(projects.data);
+        }
+      }
     };
     getProjects();
     return () => {
@@ -25,7 +45,7 @@ export default function Projects() {
         setOpenModal(false);
       });
     };
-  }, []);
+  }, [activeSort, activeCategory]);
 
   document.body.addEventListener("click", () => {
     setOpenModal(false);
@@ -95,20 +115,23 @@ export default function Projects() {
           ""
         )}
       </div>
-      {projects?.map((project, index) => {
-        return (
-          <ProjectItem
-            title={project.title}
-            description={project.description}
-            stack={project.stack}
-            key={index}
-            complexity={project.complexity}
-            github={project.github}
-            imageUrl={project.imageUrl}
-            linkSite={project.linkSite}
-          />
-        );
-      })}
+      <div className={styles["projects__blocks"]}>
+        {projects?.map((project, index) => {
+          return (
+            <ProjectItem
+              title={project.title}
+              description={project.description}
+              stack={project.stack}
+              key={index}
+              complexity={project.complexity}
+              github={project.github}
+              imageUrl={project.imageUrl}
+              linkSite={project.linkSite}
+              index={index}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
