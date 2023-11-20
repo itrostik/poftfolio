@@ -59,16 +59,11 @@
   }
 }
 
-.main__info-right{
-}
-
 .info-right{
   &__circle{
     position: relative;
-    //z-index: 2;
     width: 350px;
     height: 350px;
-    border-radius: 10px;
     transform: rotate(45deg);
     border: 10px solid #CD00FF;
   }
@@ -93,7 +88,7 @@
     img{
       transition: $transition;
       object-fit: cover;
-      border-radius: 10px;
+      border: 1px solid $accentColor;
       width: 300px;
       height: 300px;
     }
@@ -101,8 +96,7 @@
       transition: $transition;
       width: 300px;
       height: 300px;
-      border-radius: 10px;
-      background: #CD00FF;
+      background: $accentColor;
       transform: rotateY(180deg);
       display: flex;
       align-items: center;
