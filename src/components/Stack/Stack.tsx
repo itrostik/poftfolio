@@ -16,6 +16,7 @@ export default function Stack() {
           <img
             src={technology.img}
             onClick={() => setActiveTechnology(index)}
+            alt={""}
           ></img>
         ))}
       </div>

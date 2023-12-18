@@ -1,14 +1,6 @@
 import styles from "./ProjectItem.module.scss";
 import { Project } from "../../../@types/project.ts";
 
-//https://i.ibb.co/4NfMjLC/postgresql.png
-//https://i.ibb.co/7CGNBJP/express.png
-//https://i.ibb.co/DfRkbD5/vite.png
-//https://i.ibb.co/DRMSbkR/react.png
-//https://i.ibb.co/NTt1NX8/redux.png
-//https://i.ibb.co/HBq72K7/typescript.png
-//https://i.ibb.co/DDQFL8j/sass.png
-
 export default function ProjectItem({
   title,
   description,

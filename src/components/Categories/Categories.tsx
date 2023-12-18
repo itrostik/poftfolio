@@ -10,12 +10,11 @@ export default function Categories({
 }: Category) {
   const categories = [
     "Все",
-    "HTML + CSS/SCSS",
     "HTML + SCSS + JS",
     "SCSS + React + JS",
     "SCSS + React + TS",
     "Redux + React + TS",
-    "Redux + Next + TS",
+    "Nest + Next + TS",
   ];
 
   return (
