@@ -1,10 +1,20 @@
 import styles from "./Info.module.scss";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function Info() {
+type InfoProps = {
+  stackRef: React.RefObject<HTMLDivElement>;
+};
+export default function Info({ stackRef }: InfoProps) {
   const [clicked, setClicked] = useState(false);
 
+  function scrollIntoStack() {
+    if (stackRef.current)
+      stackRef?.current.scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+      });
+  }
   return (
     <div className={styles["main__info"]}>
       <div className={styles["main__info-left"]}>
@@ -15,7 +25,10 @@ export default function Info() {
         </div>
         <div className={styles["info-left__subtitle"]}>
           Я создаю клиентскую часть приложения/сайта, используя свой{" "}
-          <span className={styles["info-left__span"]}>
+          <span
+            className={styles["info-left__span"]}
+            onClick={() => scrollIntoStack()}
+          >
             технологический стек
           </span>
         </div>

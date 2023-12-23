@@ -1,8 +1,13 @@
 import styles from "./AboutMe.module.scss";
+import React from "react";
 
-export default function AboutMe() {
+type AboutMeProps = {
+  aboutMeRef: React.RefObject<HTMLDivElement>;
+};
+
+export default function AboutMe({ aboutMeRef }: AboutMeProps) {
   return (
-    <div className={styles["about"]}>
+    <div className={styles["about"]} ref={aboutMeRef}>
       <div className={styles["about__title"]}>
         #<span>информация</span>
       </div>

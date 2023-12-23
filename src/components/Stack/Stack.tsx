@@ -1,11 +1,15 @@
 import styles from "./Stack.module.scss";
 
 import { mainStack } from "../../../constants/stack.ts";
-import { useState } from "react";
-export default function Stack() {
+import React, { useState } from "react";
+
+type StackProps = {
+  stackRef: React.RefObject<HTMLDivElement>;
+};
+export default function Stack({ stackRef }: StackProps) {
   const [activeTechnology, setActiveTechnology] = useState(0);
   return (
-    <div className={styles["stack"]}>
+    <div className={styles["stack"]} ref={stackRef}>
       <div className={styles["stack__title"]}>Технологический стэк</div>
       <div className={styles["stack__description"]}>
         Здесь указаны основные технологии, которые я использую при разработке

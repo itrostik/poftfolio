@@ -5,7 +5,12 @@ import { motion } from "framer-motion";
 import ProjectItem from "../../components/ProjectItem/ProjectItem.tsx";
 import axios from "axios";
 import { Project } from "../../../@types/project.ts";
-export default function Projects() {
+
+type ProjectProps = {
+  projectsRef: React.RefObject<HTMLDivElement>;
+};
+
+export default function Projects({ projectsRef }: ProjectProps) {
   const [activeCategory, setActiveCategory] = useState(0);
   const sortTypes = ["по убыванию сложности", "по возрастанию сложности"];
   const [activeSort, setActiveSort] = useState(0);
@@ -62,7 +67,7 @@ export default function Projects() {
   }
 
   return (
-    <div className={styles["projects"]}>
+    <div className={styles["projects"]} ref={projectsRef}>
       <div className={styles["projects__title"]}>
         <span>#</span>проекты
       </div>
