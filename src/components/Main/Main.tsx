@@ -16,8 +16,8 @@ export default function Main({
   stackRef,
   projectsRef,
   aboutMeRef,
-  contactsRef,
-}: MainProps) {
+} // contactsRef,
+: MainProps) {
   return (
     <div className={styles["main"]}>
       <Info stackRef={stackRef} />
