@@ -1,0 +1,31 @@
+.contacts__title{
+  color: #CD00FF;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0 0 10px 0;
+  span{
+    color: #FFFFFF;
+  }
+}
+
+.contacts{
+  display: flex;
+  align-items: center;
+}
+
+a svg{
+  &:hover{
+    fill: #CD00FF;
+    transition: 0.3s;
+  }
+}
+
+.email {
+  &:hover {
+    fill: none;
+    path{
+      stroke: #CD00FF;
+      transition: 0.3s;
+    }
+  }
+}
