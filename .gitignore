@@ -24,6 +24,9 @@ dist-ssr
 *.sw?
 
 yarn.lock
+<<<<<<< HEAD
 .eslintrc.cjs
 
 projects.json
+=======
+>>>>>>> 1864283 (прошлая версия была version 2.0, сносим)
