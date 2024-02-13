@@ -8,7 +8,7 @@ import javascript from "../../assets/js.svg";
 import axios from "../../assets/axios.svg";
 
 import mono from "/mono.svg";
-import rostikshop from "/rostikshop.svg";
+import shop from "/shop.svg";
 import styles from "./Projects.module.scss";
 
 const projects = [
@@ -28,7 +28,7 @@ const projects = [
     link: "https://shop.itrostik.ru/",
     description: "Онлайн магазин одежды",
     stack: [react, scss, javascript, axios],
-    logo: rostikshop,
+    logo: shop,
     domain: "shop.itrostik.ru",
     github: "https://github.com/itrostik/RostikShop",
   },
