@@ -5,6 +5,8 @@ import scss from "../../assets/scss.svg";
 import lucide from "../../assets/lucide.svg";
 import react from "../../assets/react.svg";
 import javascript from "../../assets/js.svg";
+import axios from "../../assets/axios.svg";
+
 import mono from "/mono.svg";
 import rostikshop from "/rostikshop.svg";
 import styles from "./Projects.module.scss";
@@ -23,11 +25,11 @@ const projects = [
   {
     name: "Rostik Shop",
     title: "Онлайн магазин",
-    link: "https://rostikshop.netlify.app/",
+    link: "https://shop.itrostik.ru/",
     description: "Онлайн магазин одежды",
-    stack: [react, scss, javascript],
+    stack: [react, scss, javascript, axios],
     logo: rostikshop,
-    domain: "rostikshop.itrostik.ru",
+    domain: "shop.itrostik.ru",
     github: "https://github.com/itrostik/RostikShop",
   },
 ];
