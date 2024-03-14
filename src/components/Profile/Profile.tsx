@@ -1,4 +1,4 @@
-import avatar from "/avatar.jpg";
+import avatar from "/avatar.png";
 import styles from "./Profile.module.scss";
 
 import telegram from "../../assets/telegram.svg";
