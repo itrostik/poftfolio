@@ -24,9 +24,9 @@ const projects = [
   },
   {
     name: "Rostik Shop",
-    title: "Онлайн магазин",
+    title: "Интернет-магазин",
     link: "https://shop.itrostik.ru/",
-    description: "Онлайн магазин одежды",
+    description: "Интернет-магазин одежды",
     stack: [react, scss, javascript, axios],
     logo: shop,
     domain: "shop.itrostik.ru",
