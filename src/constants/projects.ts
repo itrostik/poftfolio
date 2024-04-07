@@ -15,6 +15,7 @@ import prettier from "../assets/prettier.svg";
 import eslint from "../assets/eslint.svg";
 import yarn from "../assets/yarn.svg";
 import npm from "../assets/npm.svg";
+import prisma from "../assets/prisma.svg";
 
 import mono from "/mono.svg";
 import mirum from "/mirum.png";
@@ -64,7 +65,7 @@ export const projects = [
     title: "Платформа для оценки сериалов/фильмов",
     description: "Проект для Лаборатории Агона",
     link: "https://watch.itrostik.ru/",
-    stack: [next, nest, postgresql, scss, typescript, axios, yarn],
+    stack: [next, nest, postgresql, prisma, scss, typescript, axios, yarn],
     logo: watch,
     domain: "watch.itrostik.ru",
     github: "https://github.com/itrostik/watch-later-app",
