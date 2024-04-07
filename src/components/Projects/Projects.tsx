@@ -1,38 +1,5 @@
-import next from "../../assets/next.svg";
-import convex from "../../assets/convex.svg";
-import typescript from "../../assets/ts.svg";
-import scss from "../../assets/scss.svg";
-import lucide from "../../assets/lucide.svg";
-import react from "../../assets/react.svg";
-import javascript from "../../assets/js.svg";
-import axios from "../../assets/axios.svg";
-
-import mono from "/mono.svg";
-import shop from "/shop.svg";
 import styles from "./Projects.module.scss";
-
-const projects = [
-  {
-    name: "mono",
-    title: "Онлайн монополия",
-    link: "https://mono.lldan.ru/",
-    description: "Командный проект",
-    stack: [next, convex, typescript, scss, lucide],
-    logo: mono,
-    domain: "mono.lldan.ru",
-    github: "https://github.com/lld4n/mono",
-  },
-  {
-    name: "Rostik Shop",
-    title: "Интернет-магазин",
-    link: "https://shop.itrostik.ru/",
-    description: "Интернет-магазин одежды",
-    stack: [react, scss, javascript, axios],
-    logo: shop,
-    domain: "shop.itrostik.ru",
-    github: "https://github.com/itrostik/RostikShop",
-  },
-];
+import { projects } from "../../constants/projects.ts";
 
 export default function Projects() {
   return (
@@ -51,12 +18,18 @@ export default function Projects() {
               ))}
             </div>
             <div className={styles.links}>
-              <a href={project.github} className={styles.link}>
-                Github
-              </a>
-              <a href={project.link} className={styles.link}>
-                {project.domain}
-              </a>
+              {project.github ? (
+                <>
+                  <a href={project.github} className={styles.link}>
+                    Github
+                  </a>
+                  <a href={project.link} className={styles.link}>
+                    {project.domain}
+                  </a>
+                </>
+              ) : (
+                <span>Если нужно подробнее — напишите</span>
+              )}
             </div>
           </div>
         ))}
