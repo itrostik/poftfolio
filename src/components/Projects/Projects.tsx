@@ -4,7 +4,7 @@ import { projects } from "../../constants/projects.ts";
 export default function Projects() {
   return (
     <div className={styles.wrapper}>
-      <h1>Мои проекты</h1>
+      <h1>Мои лучшие проекты</h1>
       <div className={styles.projects}>
         {projects.map((project) => (
           <div className={styles.project}>
@@ -18,18 +18,15 @@ export default function Projects() {
               ))}
             </div>
             <div className={styles.links}>
-              {project.github ? (
-                <>
-                  <a href={project.github} className={styles.link}>
-                    Github
-                  </a>
-                  <a href={project.link} className={styles.link}>
-                    {project.domain}
-                  </a>
-                </>
-              ) : (
-                <span>Если нужно подробнее — напишите</span>
+              {project.github && (
+                <a href={project.github} className={styles.link}>
+                  Github
+                </a>
               )}
+              {project.domain && <a href={project.link} className={styles.link}>
+                {project.domain}
+              </a>}
+              {!project.github && !project.domain && <span className={styles.text}>Если нужна информация - пишите</span>}
             </div>
           </div>
         ))}

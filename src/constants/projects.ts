@@ -1,5 +1,4 @@
 import next from "../assets/next.svg";
-import nest from "../assets/nest.svg";
 import postgresql from "../assets/postgresql.svg";
 import convex from "../assets/convex.svg";
 import typescript from "../assets/ts.svg";
@@ -15,14 +14,33 @@ import prettier from "../assets/prettier.svg";
 import eslint from "../assets/eslint.svg";
 import yarn from "../assets/yarn.svg";
 import npm from "../assets/npm.svg";
-import prisma from "../assets/prisma.svg";
+import spring from "../assets/spring.svg";
+import docker from "../assets/docker.svg";
 
 import mono from "/mono.svg";
 import mirum from "/mirum.png";
 import shop from "/shop.svg";
-import watch from "/watch-later.png";
+import addendum from "/addendum.png";
 
 export const projects = [
+  {
+    name: "addendum",
+    title: "Платформа обмена/покупки игр PS5",
+    description: "Реализация собственной идеи/семестровка по ОРИС",
+    stack: [
+      next,
+      typescript,
+      postgresql,
+      spring,
+      docker,
+      scss,
+      lucide,
+      axios,
+    ],
+    logo: addendum,
+    link: 'https://addendum-tau.vercel.app/',
+    domain: 'addendum.itrostik.ru',
+  },
   {
     name: "Mirum Greece",
     title: "Система мультимедийной инсталляции",
@@ -59,15 +77,5 @@ export const projects = [
     logo: shop,
     domain: "shop.itrostik.ru",
     github: "https://github.com/itrostik/RostikShop",
-  },
-  {
-    name: "Watch Later",
-    title: "Платформа для оценки сериалов/фильмов",
-    description: "Проект для Лаборатории Агона",
-    link: "https://watch.itrostik.ru/",
-    stack: [next, nest, postgresql, prisma, scss, typescript, axios, yarn],
-    logo: watch,
-    domain: "watch.itrostik.ru",
-    github: "https://github.com/itrostik/watch-later-app",
-  },
+  }
 ];
