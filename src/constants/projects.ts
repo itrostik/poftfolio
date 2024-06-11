@@ -1,5 +1,4 @@
 import next from "../assets/next.svg";
-import postgresql from "../assets/postgresql.svg";
 import convex from "../assets/convex.svg";
 import typescript from "../assets/ts.svg";
 import scss from "../assets/scss.svg";
@@ -14,32 +13,41 @@ import prettier from "../assets/prettier.svg";
 import eslint from "../assets/eslint.svg";
 import yarn from "../assets/yarn.svg";
 import npm from "../assets/npm.svg";
-import spring from "../assets/spring.svg";
-import docker from "../assets/docker.svg";
 
 import mono from "/mono.svg";
 import mirum from "/mirum.png";
 import shop from "/shop.svg";
-import addendum from "/addendum.png";
+import travis from "/travis.png";
 
 export const projects = [
   {
-    name: "addendum",
-    title: "Платформа обмена/покупки игр PS5",
-    description: "Реализация собственной идеи/семестровка по ОРИС",
+    name: 'travis',
+    title: 'Клон телеграма',
+    description: 'Командный проект для лаборатории Агона',
     stack: [
       next,
       typescript,
-      postgresql,
-      spring,
-      docker,
+      convex,
       scss,
       lucide,
-      axios,
+      yarn,
+      eslint,
+      prettier
     ],
-    logo: addendum,
-    link: 'https://addendum-tau.vercel.app/',
-    domain: 'addendum.itrostik.ru',
+    logo: travis,
+    link: 'https://travis.itrostik.ru',
+    domain: 'travis.itrostik.ru',
+    github: "https://github.com/rl-travis/travis",
+  },
+  {
+    name: "mono",
+    title: "Онлайн монополия",
+    link: "https://mono.lldan.ru/",
+    description: "Командный проект",
+    stack: [next, convex, typescript, scss, lucide, prettier, eslint, yarn],
+    logo: mono,
+    domain: "mono.lldan.ru",
+    github: "https://github.com/lld4n/mono",
   },
   {
     name: "Mirum Greece",
@@ -57,16 +65,6 @@ export const projects = [
       yarn,
     ],
     logo: mirum,
-  },
-  {
-    name: "mono",
-    title: "Онлайн монополия",
-    link: "https://mono.lldan.ru/",
-    description: "Командный проект",
-    stack: [next, convex, typescript, scss, lucide, prettier, eslint, yarn],
-    logo: mono,
-    domain: "mono.lldan.ru",
-    github: "https://github.com/lld4n/mono",
   },
   {
     name: "Rostik Shop",
